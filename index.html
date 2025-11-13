@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Dewi Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="./assets/img/logo_unsil.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- =======================================================
+  * Template Name: Dewi
+  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<style>
+  .team-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  .member {
+    position: relative;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    text-align: center;
+  }
+
+  .member .pic img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  /* Info langsung tampil */
+  .member-info {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 100%;
+    padding: 20px;
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent); */
+    color: white;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .member-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .member-info span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .member .social {
+    margin-top: 10px;
+  }
+
+  .member .social a {
+    color: white;
+    margin-right: 8px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .member .social a:hover {
+    color: #00bcd4;
+  }
+
+  @media(max-width: 768px) {
+    .team-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media(max-width: 576px) {
+    .team-section {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .team .swiper {
+    padding-bottom: 50px;
+  }
+
+  .team .swiper-button-next,
+  .team .swiper-button-prev {
+    color: #0dcaf0;
+    transition: 0.3s;
+  }
+
+  .team .swiper-button-next:hover,
+  .team .swiper-button-prev:hover {
+    color: #007bff;
+  }
+
+  .team .swiper-pagination-bullet-active {
+    background: #0dcaf0;
+  }
+
+  .stats-item {
+    background: #fff;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .stats-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Baris ikon + angka + unit */
+  .stats-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* Angka utama */
+  .counter {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #222;
+  }
+
+  /* Unit tambahan (jam, %, k, dsb) */
+  .unit {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #555;
+    margin-left: 2px;
+  }
+
+  /* Ikon sedikit lebih kecil */
+  .stats-inline i {
+    font-size: 1.8rem !important;
+  }
+
+  /* Teks deskripsi */
+  .stats-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .color-blue {
+    color: #007bff;
+  }
+
+  .color-orange {
+    color: #ff9800;
+  }
+
+  .color-green {
+    color: #28a745;
+  }
+
+  .color-pink {
+    color: #e91e63;
+  }
+
+  @media (max-width: 768px) {
+    .counter {
+      font-size: 1.8rem;
+    }
+
+    .stats-inline i {
+      font-size: 1.5rem !important;
+    }
+  }
+</style>
+<style>
+  /* === WARNA UTAMA === */
+  .text-orange {
+    color: #ff7b00 !important;
+  }
+
+  .bg-orange {
+    background-color: #ff7b00 !important;
+  }
+
+  .btn-orange {
+    background-color: #ff7b00;
+    color: #fff;
+    border: none;
+    transition: all 0.3s;
+  }
+
+  .btn-orange:hover {
+    background-color: #e86b00;
+    box-shadow: 0 4px 12px rgba(255, 123, 0, 0.4);
+  }
+
+  /* === QUIZ SECTION === */
+  .quiz-option {
+    border: 2px solid #ffb366;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+
+  .quiz-option:hover {
+    background-color: #fff3e0;
+    border-color: #ff7b00;
+    transform: translateY(-2px);
+  }
+
+  .quiz-option.selected {
+    background-color: #ff7b00;
+    color: white;
+    border-color: #ff7b00;
+  }
+
+  .quiz-card {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">CampusTok Insight<h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="cta-btn" href="index.html#about">Get Started</a> -->
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="./assets/img/ilutrasi-gadget-tiktokShop.jpeg" alt="" data-aos="fade-in" style="object-position: top;">
+
+      <div class="container d-flex flex-column align-items-center ">
+        <h2 data-aos="fade-up" data-aos-delay="100">Kelompok iii</h2>
+        <p data-aos="fade-up" data-aos-delay="200" class="fs-5"> pengaruh bahasa persuasif pada konten tiktok terhadap
+          gaya hidup konsumtif mahasiswa program studi pendidikan bahasa inggris</p>
+        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#about" class="btn-get-started">Get Started</a>
+          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+            class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch
+              Video</span></a>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3>Tema dan Topik</h3>
+            <img src="./assets/img/tema.jpeg" class="img-fluid rounded-4 mb-4" alt="">
+            <p> Penelitian ini mengambil tema Ekonomi, karena membahas fenomena yang berkaitan dengan perilaku konsumsi
+              masyarakat di era digital. Adapun topik yang diangkat dalam penelitian ini adalah “Pengaruh Media Sosial
+              terhadap Gaya Hidup Konsumtif Mahasiswa.” Topik ini dipilih karena media sosial saat ini memiliki pengaruh
+              yang besar terhadap pola pikir dan perilaku konsumsi individu, khususnya mahasiswa sebagai kelompok
+              pengguna
+              aktif media sosial. Melalui penelitian ini diharapkan dapat diketahui sejauh mana media sosial memengaruhi
+              gaya hidup konsumtif dan faktor-faktor yang mendorong perilaku tersebut.</p>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="content ps-0 ps-lg-5">
+              <h3>Tujuan proyek</h3>
+              <p>1. Untuk mengetahui bagaimana penggunaan bahasa persuasif dalam konten TikTok dapat memengaruhi
+                perilaku
+                konsumtif mahasiswa. <br>
+                2. Untuk melihat bagaimana cara para kreator TikTok berbicara atau menulis kata-kata agar orang tertarik
+                membeli barang yang dipromosikan. <br>
+                3.Untuk memahami hubungan antara penggunaan bahasa persuasif atau promosi dengan meningkatnya gaya hidup
+                mahasiswa yang konsumtif.</p>
+              <div class="position-relative mt-4">
+                <img src="./assets/img/tujuan.jpeg" class="img-fluid rounded-4" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background py-5">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 text-center">
+
+          <!-- Item 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="stats-item p-4 rounded-4 shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="stats-inline d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-emoji-smile color-blue fs-3"></i>
+                <h3 class="counter mb-0">
+                  <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                </h3>
+              </div>
+              <p class="mt-3">Jumlah Responden</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="stats-item p-4 rounded-4 shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="stats-inline d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-journal-richtext color-orange fs-3"></i>
+                <h3 class="counter mb-0">
+                  <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                  <span class="unit">jam</span>
+                </h3>
+              </div>
+              <p class="mt-3">Rata-rata Durasi Menggunakan TikTok</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="stats-item p-4 rounded-4 shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="stats-inline d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-headset color-green fs-3"></i>
+                <h3 class="counter mb-0">
+                  <span data-purecounter-start="0" data-purecounter-end="78" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                  <span class="unit">%</span>
+                </h3>
+              </div>
+              <p class="mt-3">Persentase Menggunakan TikTokShop</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="stats-item p-4 rounded-4 shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="stats-inline d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-people color-pink fs-3"></i>
+                <h3 class="counter mb-0">
+                  <span data-purecounter-start="0" data-purecounter-end="600" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                  <span class="unit">k</span>
+                </h3>
+              </div>
+              <p class="mt-3">Rata-rata Pengeluaran per Minggu</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>manfaat</h2>
+        <p>manfaat penelitian<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="img">
+                <img src="./assets/img/kesadaran.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>Meningkatkan Kesadaran Konsumtif</h3>
+                </a>
+                <p>Membantu mahasiswa memahami dampak media sosial terhadap kebiasaan belanja mereka sehingga dapat
+                  lebih bijak dalam mengelola keuangan.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="img">
+                <img src="./assets/img/penelitian.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>Menjadi Sumber Referensi Penelitian</h3>
+                </a>
+                <p>Menyediakan data dan hasil penelitian yang dapat digunakan sebagai acuan dalam studi lanjutan di
+                  bidang ekonomi dan sosial.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="img">
+                <img src="./assets/img/digital.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <a href="service-details.html" class="stretched-link">
+                  <h3>Pengembangan Media Edukasi Digital</h3>
+                </a>
+                <p>Mendorong penggunaan media sosial secara positif sebagai sarana edukasi, bukan sekadar konsumsi.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section py-5" style="background-color: #fffaf5;">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-uppercase" style="color: #ff7b00;">🧠 Tes Kepribadian Konsumtif Kamu</h2>
+          <p class="text-muted">Jawab beberapa pertanyaan sederhana dan temukan tipe kepribadian konsumtif kamu!</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress mb-4 rounded-pill" style="height: 14px; background-color: #ffe5cc;">
+          <div id="progress-bar" class="progress-bar"
+            style="width: 0%; background-color: #ff7b00; transition: width 0.4s;"></div>
+        </div>
+
+        <!-- Quiz Card -->
+        <div id="quiz-card" class="quiz-card mx-auto p-4 shadow-lg rounded-4 bg-white" style="max-width: 600px;">
+          <div id="quiz-container"></div>
+          <button id="next-btn" class="btn w-100 mt-4 fw-semibold py-2 rounded-pill"
+            style="background-color: #ff7b00; color: white;">
+            Selanjutnya →
+          </button>
+        </div>
+
+        <!-- Result -->
+        <div id="result" class="mt-5 p-5 rounded-4 shadow-lg d-none text-center bg-white"
+          style="max-width: 600px; margin: auto;">
+          <div id="result-icon" class="fs-1 mb-3"></div>
+          <h3 id="result-title" class="fw-bold mb-3"></h3>
+          <p id="result-text" class="lead text-muted"></p>
+        </div>
+      </div>
+    </section>
+    <!-- Services 2 Section -->
+    <section id="services-2" class="services-2 section light-background">
+
+      <!-- Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>CHECK OUR SERVICES</p>
+      </div> -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-briefcase icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Lorem Ipsum</a></h4>
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                  occaecati cupiditate non provident</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-card-checklist icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Dolor Sitema</a></h4>
+                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat tarad limino ata</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-bar-chart icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Sed ut perspiciatis</a></h4>
+                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                  fugiat nulla pariatur</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-binoculars icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Magni Dolores</a></h4>
+                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-brightness-high icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Nemo Enim</a></h4>
+                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                  praesentium voluptatum deleniti atque</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex position-relative h-100">
+              <i class="bi bi-calendar4-week icon flex-shrink-0"></i>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Eiusmod Tempor</a></h4>
+                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                  soluta nobis est eligendi</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services 2 Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section dark-background">
+
+      <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="./assets/img/Purbaya.jpg" class="testimonial-img" alt="">
+                <h3>purbaya</h3>
+                <h4>menteri keuangan</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Belanja enggak apa-apa, belanja mau yang mahal, mau yang murah, tapi sesuaikan dengan kantong
+                    Anda sendiri. Jangan ngutang,
+                    Baca artikel CNBC Indonesia "Wajib Catat! Quote of The Day Menkeu Purbaya Buat Anak Muda RI</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="./assets/img/timothy.jpg" class="testimonial-img" alt="">
+                <h3>timothy ronald</h3>
+                <h4>dewa crypto</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>lu tidur siang bayi kerja bos</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>dokumentasi</h2>
+        <p>DOKUMENTASI</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">luring</li>
+            <li data-filter=".filter-product">daring</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="./assets/img/dok1.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>luring 1</h4>
+                  <p>Luring awal </p>
+                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="./assets/img/dok2.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>luring 1</h4>
+                  <p>Luring awal/p>
+                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="./assets/img/dok3.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>luring 1</h4>
+                  <p>Luring awal/p>
+                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2"
+                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2"
+                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div> -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Team Section -->
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title text-center mb-5">
+          <h2>Our Team</h2>
+          <p>Kenali orang-orang hebat di balik kesuksesan kami.</p>
+        </div>
+
+        <div class="swiper myTeamSwiper">
+          <div class="swiper-wrapper">
+
+            <!-- Team Member 1 -->
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/alin.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>Alin Meiland</h4>
+                  <span>Ketua</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>eka nurfadilatunnisa</h4>
+                  <span>koordinasi koordinasi observasi</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/WhatsApp Image 2025-11-13 at 13.00.24 (1).jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>Erik Muna Gotama</h4>
+                  <span>koordinasi laporan</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/jasmine.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>Robia'ah aliya</h4>
+                  <span>koordinasi koordinasi proposal</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/fajrul.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>fajrul hakam atala</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/erlang.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>muhamad erlangga</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/WhatsApp Image 2025-11-13 at 13.00.24.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>muhamad fariz</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>pajar sidik</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/nada.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>nada sausan</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>nabila</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>raysa ayu</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/marwah.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>siti marwah</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="member">
+                <div class="pic">
+                  <img src="./assets/img/zulfa.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="member-info">
+                  <h4>zulpa agustin</h4>
+                  <span>anggota</span>
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tambahkan anggota lain dengan struktur yang sama -->
+          </div>
+
+          <!-- Pagination dan Navigasi -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Team Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Kontak</h2>
+        <p>Hubungi kami</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 ">
+            <div class="row gy-4">
+
+              <div class="col-lg-12">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+                  data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Alamat</h3>
+                  <p>Jalan Siliwangi No. 24 Kahuripan Kota Tasikmalaya 46115.</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+                  data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Telepon</h3>
+                  <p>08987654321</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
+                  data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email</h3>
+                  <p>fariz.hobycoli@big.boobs</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="500">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="nama kamu" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Email kamu" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="subjek" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="4" placeholder="pesan" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">pesan kamu sudah dikirim.terimakasih</div>
+
+                  <button type="submit">kirim</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">kelompok 3</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>kelompok 3</p>
+            <p>universitas siliwangi</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>08123456789</span></p>
+            <p><strong>Email:</strong> <span>erlangcabul@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div> -->
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>dukung kami</h4>
+          <p>yang subscribe dulur</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">kamu sudah langganan. mks</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">erik</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+          href=“https://themewagon.com>ThemeWagon
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    var swiper = new Swiper(".myTeamSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        480: { slidesPerView: 1 }
+      }
+    });
+  </script>
+
+
+  <script>
+    const questions = [
+      {
+        question: "Seberapa sering kamu membeli produk yang sedang viral di TikTok?",
+        options: ["Sangat sering", "Kadang-kadang", "Jarang", "Tidak pernah"],
+        scores: [4, 3, 2, 1]
+      },
+      {
+        question: "Apa alasan utama kamu membeli suatu produk?",
+        options: ["Karena rekomendasi influencer", "Karena kebutuhan", "Karena diskon", "Karena ingin mencoba hal baru"],
+        scores: [4, 1, 3, 2]
+      },
+      {
+        question: "Ketika melihat konten promosi menarik, kamu biasanya…",
+        options: ["Langsung beli", "Lihat review dulu", "Lewat begitu saja", "Tidak tertarik"],
+        scores: [4, 3, 2, 1]
+      },
+      {
+        question: "Seberapa sering kamu menyesal setelah membeli barang yang tidak dibutuhkan?",
+        options: ["Sering banget", "Kadang-kadang", "Jarang", "Tidak pernah"],
+        scores: [4, 3, 2, 1]
+      },
+      {
+        question: "Berapa lama rata-rata kamu menghabiskan waktu di TikTok per hari?",
+        options: ["Lebih dari 3 jam", "1–3 jam", "Kurang dari 1 jam", "Jarang buka TikTok"],
+        scores: [4, 3, 2, 1]
+      }
+    ];
+
+    let currentQuestion = 0;
+    let totalScore = 0;
+
+    const quizContainer = document.getElementById("quiz-container");
+    const nextBtn = document.getElementById("next-btn");
+    const progressBar = document.getElementById("progress-bar");
+    const resultDiv = document.getElementById("result");
+    const resultTitle = document.getElementById("result-title");
+    const resultText = document.getElementById("result-text");
+    const resultIcon = document.getElementById("result-icon");
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      quizContainer.innerHTML = `
+      <h5 class="fw-bold mb-3 text-start" style="color:#333;">${q.question}</h5>
+      ${q.options.map((opt, i) => `<div class="quiz-option" data-score="${q.scores[i]}">${opt}</div>`).join("")}
+    `;
+
+      document.querySelectorAll(".quiz-option").forEach(opt => {
+        opt.addEventListener("click", () => {
+          document.querySelectorAll(".quiz-option").forEach(o => o.classList.remove("selected"));
+          opt.classList.add("selected");
+          nextBtn.classList.remove("d-none");
+        });
+      });
+
+      const progress = ((currentQuestion) / questions.length) * 100;
+      progressBar.style.width = progress + "%";
+    }
+
+    nextBtn.addEventListener("click", () => {
+      const selected = document.querySelector(".quiz-option.selected");
+      if (!selected) return;
+      totalScore += parseInt(selected.dataset.score);
+
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+        nextBtn.classList.add("d-none");
+      } else {
+        showResult();
+      }
+    });
+
+    function showResult() {
+      document.getElementById("quiz-card").classList.add("d-none");
+      resultDiv.classList.remove("d-none");
+      progressBar.style.width = "100%";
+
+      let title = "", text = "", icon = "";
+      if (totalScore >= 18) {
+        title = "🧠 Tipe: Highly Consumptive";
+        text = "Kamu mudah terpengaruh oleh tren dan promosi online. Disarankan mengatur pengeluaran lebih terencana.";
+        icon = "🔥";
+      } else if (totalScore >= 12) {
+        title = "💼 Tipe: Balanced Consumer";
+        text = "Kamu cukup selektif dalam berbelanja, tapi tetap terbuka pada hal baru.";
+        icon = "⚖️";
+      } else {
+        title = "🌿 Tipe: Mindful Spender";
+        text = "Kamu bijak dan lebih fokus pada kebutuhan daripada keinginan.";
+        icon = "🌿";
+      }
+
+      resultIcon.innerText = icon;
+      resultTitle.innerText = title;
+      resultText.innerText = text;
+    }
+
+    loadQuestion();
+  </script>
+</body>
+
+</html>
