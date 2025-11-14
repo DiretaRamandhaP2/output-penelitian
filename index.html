@@ -30,6 +30,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Dewi
@@ -40,11 +41,42 @@
   ======================================================== -->
 </head>
 <style>
-  .team-section {
+  /* .team-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
+  } */
+
+  .testimonial-item .testimonial-img {
+    width: 120px;         /* ukuran lingkaran */
+    height: 120px;        /* selalu sama agar rapi */
+    object-fit: cover;    /* crop otomatis agar proporsional */
+    border-radius: 50%;   /* tetap bulat */
+    border: 4px solid #fff;
   }
+
+  /* Responsive untuk layar kecil */
+  @media (max-width: 576px) {
+    .testimonial-item .testimonial-img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+
+  .img-kecil {
+  max-height: 400px; /* atur ketinggian sesuai yang kamu mau */
+  width: 100%;
+  object-fit: cover; /* supaya gambar tetap rapi */
+  border-radius: 10px;
+  }
+
+  @media (max-width: 576px) {
+    .img-kecil {
+      max-height: 180px; /* lebih kecil untuk mobile */
+    }
+  }
+
 
   .member {
     position: relative;
@@ -88,6 +120,8 @@
 
   .member .social {
     margin-top: 10px;
+    display: none;
+
   }
 
   .member .social a {
@@ -95,13 +129,14 @@
     margin-right: 8px;
     font-size: 1.1rem;
     transition: color 0.3s;
+    display: none;
   }
 
   .member .social a:hover {
     color: #00bcd4;
   }
 
-  @media(max-width: 768px) {
+  /* @media(max-width: 768px) {
     .team-section {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -111,7 +146,7 @@
     .team-section {
       grid-template-columns: 1fr;
     }
-  }
+  } */
 
   .team .swiper {
     padding-bottom: 50px;
@@ -285,7 +320,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
@@ -302,7 +337,7 @@
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
-          </li>
+          </li> -->
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -320,9 +355,9 @@
 
       <img src="./assets/img/ilutrasi-gadget-tiktokShop.jpeg" alt="" data-aos="fade-in" style="object-position: top;">
 
-      <div class="container d-flex flex-column align-items-center ">
+      <div class="container d-flex flex-column align-items-start">
         <h2 data-aos="fade-up" data-aos-delay="100">Kelompok iii</h2>
-        <p data-aos="fade-up" data-aos-delay="200" class="fs-5"> pengaruh bahasa persuasif pada konten tiktok terhadap
+        <p data-aos="fade-up" data-aos-delay="200" class="fs-5" style="width:54%"> pengaruh bahasa persuasif pada konten tiktok terhadap
           gaya hidup konsumtif mahasiswa program studi pendidikan bahasa inggris</p>
         <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
           <a href="#about" class="btn-get-started">Get Started</a>
@@ -337,41 +372,62 @@
     <!-- About Section -->
     <section id="about" class="about section">
 
-      <div class="container">
+  <div class="container">
 
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3>Tema dan Topik</h3>
-            <img src="./assets/img/tema.jpeg" class="img-fluid rounded-4 mb-4" alt="">
-            <p> Penelitian ini mengambil tema Ekonomi, karena membahas fenomena yang berkaitan dengan perilaku konsumsi
-              masyarakat di era digital. Adapun topik yang diangkat dalam penelitian ini adalah “Pengaruh Media Sosial
-              terhadap Gaya Hidup Konsumtif Mahasiswa.” Topik ini dipilih karena media sosial saat ini memiliki pengaruh
-              yang besar terhadap pola pikir dan perilaku konsumsi individu, khususnya mahasiswa sebagai kelompok
-              pengguna
-              aktif media sosial. Melalui penelitian ini diharapkan dapat diketahui sejauh mana media sosial memengaruhi
-              gaya hidup konsumtif dan faktor-faktor yang mendorong perilaku tersebut.</p>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="content ps-0 ps-lg-5">
-              <h3>Tujuan proyek</h3>
-              <p>1. Untuk mengetahui bagaimana penggunaan bahasa persuasif dalam konten TikTok dapat memengaruhi
-                perilaku
-                konsumtif mahasiswa. <br>
-                2. Untuk melihat bagaimana cara para kreator TikTok berbicara atau menulis kata-kata agar orang tertarik
-                membeli barang yang dipromosikan. <br>
-                3.Untuk memahami hubungan antara penggunaan bahasa persuasif atau promosi dengan meningkatnya gaya hidup
-                mahasiswa yang konsumtif.</p>
-              <div class="position-relative mt-4">
-                <img src="./assets/img/tujuan.jpeg" class="img-fluid rounded-4" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <!-- BAGIAN 1: Teks kiri - Gambar kanan -->
+    <div class="row gy-4 align-items-center">
+      
+      <!-- Teks -->
+      <div class="col-lg-6 order-lg-1 " data-aos="fade-up" data-aos-delay="100">
+        <h3 style="vertical-align: text-top;">Tema dan Topik</h3>
+        <p>
+          Penelitian ini mengambil tema Ekonomi, karena membahas fenomena yang berkaitan dengan perilaku konsumsi
+          masyarakat di era digital. Adapun topik yang diangkat dalam penelitian ini adalah “Pengaruh Media Sosial
+          terhadap Gaya Hidup Konsumtif Mahasiswa.” Topik ini dipilih karena media sosial saat ini memiliki pengaruh
+          yang besar terhadap pola pikir dan perilaku konsumsi individu, khususnya mahasiswa sebagai kelompok pengguna
+          aktif media sosial. Melalui penelitian ini diharapkan dapat diketahui sejauh mana media sosial memengaruhi
+          gaya hidup konsumtif dan faktor-faktor yang mendorong perilaku tersebut.
+        </p>
       </div>
 
-    </section><!-- /About Section -->
+      <!-- Gambar -->
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="250">
+        <img src="./assets/img/tema.jpeg" class="img-fluid rounded-4 mb-4 img-kecil" alt="">
+      </div>
+
+    </div>
+
+
+    <!-- BAGIAN 2: Gambar kiri - Teks kanan -->
+    <div class="row gy-4 align-items-center mt-5">
+
+      <!-- Gambar -->
+      <div class="col-lg-6 order-lg-1" data-aos="fade-up" data-aos-delay="250">
+        <img src="./assets/img/tujuan.jpeg" class="img-fluid rounded-4" alt="">
+      </div>
+
+      <!-- Teks -->
+      <div class="col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="content ps-0 ps-lg-5">
+          <h3>Tujuan proyek</h3>
+          <p>
+            1. Untuk mengetahui bagaimana penggunaan bahasa persuasif dalam konten TikTok dapat memengaruhi perilaku
+            konsumtif mahasiswa. <br>
+            2. Untuk melihat bagaimana cara para kreator TikTok berbicara atau menulis kata-kata agar orang tertarik
+            membeli barang yang dipromosikan. <br>
+            3. Untuk memahami hubungan antara penggunaan bahasa persuasif atau promosi dengan meningkatnya gaya hidup
+            mahasiswa yang konsumtif.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- /About Section -->
 
     <!-- Stats Section -->
     <section id="stats" class="stats section light-background py-5">
@@ -469,9 +525,9 @@
                 <div class="icon">
                   <i class="bi bi-activity"></i>
                 </div>
-                <a href="service-details.html" class="stretched-link">
+                <!-- <a href="service-details.html" class="stretched-link"> -->
                   <h3>Meningkatkan Kesadaran Konsumtif</h3>
-                </a>
+                <!-- </a> -->
                 <p>Membantu mahasiswa memahami dampak media sosial terhadap kebiasaan belanja mereka sehingga dapat
                   lebih bijak dalam mengelola keuangan.</p>
               </div>
@@ -487,9 +543,9 @@
                 <div class="icon">
                   <i class="bi bi-broadcast"></i>
                 </div>
-                <a href="service-details.html" class="stretched-link">
+                <!-- <a href="service-details.html" class="stretched-link"> -->
                   <h3>Menjadi Sumber Referensi Penelitian</h3>
-                </a>
+                <!-- </a> -->
                 <p>Menyediakan data dan hasil penelitian yang dapat digunakan sebagai acuan dalam studi lanjutan di
                   bidang ekonomi dan sosial.</p>
               </div>
@@ -505,9 +561,9 @@
                 <div class="icon">
                   <i class="bi bi-easel"></i>
                 </div>
-                <a href="service-details.html" class="stretched-link">
+                <!-- <a href="service-details.html" class="stretched-link"> -->
                   <h3>Pengembangan Media Edukasi Digital</h3>
-                </a>
+                <!-- </a> -->
                 <p>Mendorong penggunaan media sosial secara positif sebagai sarana edukasi, bukan sekadar konsumsi.</p>
               </div>
             </div>
@@ -618,7 +674,7 @@
 
       </div>
 
-    </section><!-- /Testimonials Section -->
+    </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
@@ -646,11 +702,11 @@
                 <img src="./assets/img/dok1.jpeg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>luring 1</h4>
-                  <p>Luring awal </p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"
+                  <p>Pertama kali kerja kelompok mendiskusikan tema yang akan di ambil</p>
+                  <!-- <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"
                     class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                      class="bi bi-link-45deg"></i></a> -->
                 </div>
               </div>
             </div>
@@ -659,13 +715,13 @@
               <div class="portfolio-content h-100">
                 <img src="./assets/img/dok2.jpeg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>luring 1</h4>
-                  <p>Luring awal/p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
+                  <h4>Daring 1</h4>
+                  <p>Diskusi kedua membahas subtema mengenai dampak dari sosial media</p>
+                  <!-- <a href="./assets/img/dok2.jpeg" title="Product 1"
                     data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                      class="bi bi-zoom-in text-center"></i></a> -->
+                  <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a> -->
                 </div>
               </div>
             </div>
@@ -674,13 +730,13 @@
               <div class="portfolio-content h-100">
                 <img src="./assets/img/dok3.jpeg" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>luring 1</h4>
-                  <p>Luring awal/p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
+                  <h4>Daring 2</h4>
+                  <p>Diskusi ketiga menentukan output dari hasil penelitian</p>
+                  <!-- <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
                     data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                       class="bi bi-zoom-in"></i></a>
                   <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
+                      class="bi bi-link-45deg"></i></a> -->
                 </div>
               </div>
             </div>
@@ -828,9 +884,10 @@
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title text-center mb-5">
+        <div class="section-title text-start mb-5">
           <h2>Our Team</h2>
-          <p>Kenali orang-orang hebat di balik kesuksesan kami.</p>
+          <p>Kenali orang-orang hebat</p>
+          <p>dibalik kesuksesan kami.</p>
         </div>
 
         <div class="swiper myTeamSwiper">
@@ -1074,6 +1131,42 @@
 
       </div>
     </section>
+    <script>
+      var swiper = new Swiper(".myTeamSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // RESPONSIVE
+  breakpoints: {
+    0: {        // Mobile kecil
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    576: {      // Mobile besar
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    768: {      // Tablet
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992: {      // Desktop
+      slidesPerView: 3,
+      spaceBetween: 20,
+    }
+  }
+});
+
+    </script>
     <!-- End Team Section -->
 
 
@@ -1097,7 +1190,7 @@
                   data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Alamat</h3>
-                  <p>Jalan Siliwangi No. 24 Kahuripan Kota Tasikmalaya 46115.</p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.8420003023625!2d108.22111210600622!3d-7.350741732086506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5770e4e14c7b%3A0xe223672a1e167955!2sKota%20Jl.%20Siliwangi%20No.24%2C%20Kahuripan%2C%20Kec.%20Tawang%2C%20Kab.%20Tasikmalaya%2C%20Jawa%20Barat%2046115!5e0!3m2!1sid!2sid!4v1763102426060!5m2!1sid!2sid" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div><!-- End Info Item -->
 
@@ -1177,15 +1270,15 @@
             <p class="mt-3"><strong>Phone:</strong> <span>08123456789</span></p>
             <p><strong>Email:</strong> <span>erlangcabul@gmail.com</span></p>
           </div>
-          <div class="social-links d-flex mt-4">
+          <!-- <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
+          </div> -->
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
@@ -1194,7 +1287,7 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
           </ul>
-        </div>
+        </div> -->
 
         <!-- <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
@@ -1222,8 +1315,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">erik</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Kelompok III</strong></p>
+      <!-- <div class="credits"> -->
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
@@ -1252,7 +1345,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
+  <!-- <script>
     var swiper = new Swiper(".myTeamSwiper", {
       slidesPerView: 3,
       spaceBetween: 30,
@@ -1270,7 +1363,7 @@
         480: { slidesPerView: 1 }
       }
     });
-  </script>
+  </script> -->
 
 
   <script>
