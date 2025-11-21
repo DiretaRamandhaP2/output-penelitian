@@ -30,33 +30,18 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-  <!-- =======================================================
-  * Template Name: Dewi
-  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>   <!--?-->
 </head>
-<style>
-  /* .team-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-  } */
-  
 
+<style>
   .testimonial-item .testimonial-img {
-    width: 120px;         /* ukuran lingkaran */
-    height: 120px;        /* selalu sama agar rapi */
-    object-fit: cover;    /* crop otomatis agar proporsional */
-    border-radius: 50%;   /* tetap bulat */
+    width: 120px;         
+    height: 120px;       
+    object-fit: cover;   
+    border-radius: 50%;  
     border: 4px solid #fff;
   }
 
-  /* Responsive untuk layar kecil */
   @media (max-width: 576px) {
     .testimonial-item .testimonial-img {
       width: 90px;
@@ -64,18 +49,17 @@
     }
   }
 
-
-
+/* */
   .img-kecil {
-  max-height: 400px; /* atur ketinggian sesuai yang kamu mau */
+  max-height: 400px; 
   width: 100%;
-  object-fit: cover; /* supaya gambar tetap rapi */
+  object-fit: cover;
   border-radius: 10px;
   }
 
   @media (max-width: 576px) {
     .img-kecil {
-      max-height: 180px; /* lebih kecil untuk mobile */
+      max-height: 180px;
     }
   }
 
@@ -96,14 +80,13 @@
     transition: transform 0.5s ease;
   }
 
-  /* Info langsung tampil */
+  /* Info tampil */
   .member-info {
     position: absolute;
     bottom: 0;
     left: 0px;
     width: 100%;
     padding: 20px;
-    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent); */
     color: white;
     transform: translateY(0);
     opacity: 1;
@@ -137,18 +120,6 @@
   .member .social a:hover {
     color: #00bcd4;
   }
-
-  /* @media(max-width: 768px) {
-    .team-section {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media(max-width: 576px) {
-    .team-section {
-      grid-template-columns: 1fr;
-    }
-  } */
 
   .team .swiper {
     padding-bottom: 50px;
@@ -240,8 +211,7 @@
       font-size: 1.5rem !important;
     }
   }
-</style>
-<style>
+
   /* === WARNA UTAMA === */
   .text-orange {
     color: #ff7b00 !important;
@@ -301,6 +271,66 @@
       transform: translateY(0);
     }
   }
+
+ /* Zulpa Popup kontak */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none; /* hidden default */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup Box */
+.popup-box {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Button */
+#closePopup {
+  margin-top: 15px;
+  background: #198754;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#closePopup:hover {
+  background: #157347;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.contact-btn {
+  background: #ff7b00;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  width: 30%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #c76305;
+  transform: scale(1.03);
+}
 </style>
 
 
@@ -310,8 +340,6 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h2 class="sitename">CampusTok Insight<h2>
       </a>
 
@@ -319,48 +347,27 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Benefits</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#portfolio">Documentation</a></li>
           <li><a href="#team">Team</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <!-- <a class="cta-btn" href="index.html#about">Get Started</a> -->
-
     </div>
   </header>
 
   <main class="main">
 
-    <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
       <img src="./assets/img/ilutrasi-gadget-tiktokShop.jpeg" alt="" data-aos="fade-in">
 
       <div class="container d-flex flex-column align-items-start">
         <h2 data-aos="fade-up" data-aos-delay="100">Kelompok iii</h2>
-        <p data-aos="fade-up" data-aos-delay="200" class="fs-5" style="width:54%"> pengaruh bahasa persuasif pada konten tiktok terhadap
-          gaya hidup konsumtif mahasiswa program studi pendidikan bahasa inggris</p>
+        <p data-aos="fade-up" data-aos-delay="200" class="fs-5" style="width:54%"> Pengaruh Bahasa Persuasif Pada Konten TikTOk Terhadap
+          Gaya Hidup Konsumtif Mahasiswa Program Studi Pendidikan Bahasa Inggris</p>
         <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
           <a href="#about" class="btn-get-started">Get Started</a>
           <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
@@ -405,7 +412,7 @@
 
       <!-- Gambar -->
       <div class="col-lg-6 order-lg-1" data-aos="fade-up" data-aos-delay="250">
-        <img src="./assets/img/tujuan.jpeg" class="img-fluid rounded-4" alt="">
+        <img src="./assets/img/belanja.png" class="img-fluid rounded-4" alt="" style="width: 100%; max-width: 500px; height: 500px; display: block; margin: auto;">
       </div>
 
       <!-- Teks -->
@@ -503,15 +510,13 @@
       </div>
     </section>
 
-
-
     <!-- Services Section -->
     <section id="services" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>manfaat</h2>
-        <p>manfaat penelitian<br></p>
+        <h2>Manfaat</h2>
+        <p>Manfaat Penelitian<br></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -527,9 +532,7 @@
                 <div class="icon">
                   <i class="bi bi-activity"></i>
                 </div>
-                <!-- <a href="service-details.html" class="stretched-link"> -->
                   <h3>Meningkatkan Kesadaran Konsumtif</h3>
-                <!-- </a> -->
                 <p>Membantu mahasiswa memahami dampak media sosial terhadap kebiasaan belanja mereka sehingga dapat
                   lebih bijak dalam mengelola keuangan.</p>
               </div>
@@ -545,9 +548,7 @@
                 <div class="icon">
                   <i class="bi bi-broadcast"></i>
                 </div>
-                <!-- <a href="service-details.html" class="stretched-link"> -->
                   <h3>Menjadi Sumber Referensi Penelitian</h3>
-                <!-- </a> -->
                 <p>Menyediakan data dan hasil penelitian yang dapat digunakan sebagai acuan dalam studi lanjutan di
                   bidang ekonomi dan sosial.</p>
               </div>
@@ -563,9 +564,7 @@
                 <div class="icon">
                   <i class="bi bi-easel"></i>
                 </div>
-                <!-- <a href="service-details.html" class="stretched-link"> -->
                   <h3>Pengembangan Media Edukasi Digital</h3>
-                <!-- </a> -->
                 <p>Mendorong penggunaan media sosial secara positif sebagai sarana edukasi, bukan sekadar konsumsi.</p>
               </div>
             </div>
@@ -578,6 +577,7 @@
     </section><!-- /Services Section -->
 
     <!-- Features Section -->
+    <section id="quiz" class="quiz section">
     <section id="features" class="features section py-5" style="background-color: #fffaf5;">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="text-center mb-5">
@@ -609,6 +609,7 @@
         </div>
       </div>
     </section>
+    </section>
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section dark-background">
 
@@ -637,8 +638,8 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="./assets/img/Purbaya.jpg" class="testimonial-img" alt="">
-                <h3>purbaya</h3>
-                <h4>menteri keuangan</h4>
+                <h3>Purbaya</h3>
+                <h4>Menteri Keuangan</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
@@ -656,15 +657,15 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="./assets/img/timothy.jpg" class="testimonial-img" alt="">
-                <h3>timothy ronald</h3>
-                <h4>dewa crypto</h4>
+                <h3>Timothy Ronald</h3>
+                <h4>Dewa Crypto</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                     class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  <span>lu tidur siang bayi kerja bos</span>
+                  <span>Lu tidur siang bayi kerja bos</span>
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
               </div>
@@ -705,10 +706,6 @@
                 <div class="portfolio-info">
                   <h4>luring 1</h4>
                   <p>Pertama kali kerja kelompok mendiskusikan tema yang akan di ambil</p>
-                  <!-- <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a> -->
                 </div>
               </div>
             </div>
@@ -734,145 +731,9 @@
                 <div class="portfolio-info">
                   <h4>Daring 2</h4>
                   <p>Diskusi ketiga menentukan output dari hasil penelitian</p>
-                  <!-- <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
-                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a> -->
                 </div>
               </div>
             </div>
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2"
-                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3"
-                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> -->
-
           </div><!-- End Portfolio Container -->
 
         </div>
@@ -921,8 +782,8 @@
                   <img src="./assets/img/eka.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>eka nurfadilatunnisa</h4>
-                  <span>koordinasi koordinasi observasi</span>
+                  <h4>Eka Nurfadilatunnisa</h4>
+                  <span>Koordinasi Observasi</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -941,7 +802,7 @@
                 </div>
                 <div class="member-info">
                   <h4>Erik Muna Gotama</h4>
-                  <span>koordinasi laporan</span>
+                  <span>Koordinasi Laporan = FrontEnd</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -957,8 +818,8 @@
                   <img src="./assets/img/jasmine.jpeg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>Robia'ah aliya</h4>
-                  <span>koordinasi koordinasi proposal</span>
+                  <h4>Robia'ah Aliya Jasmine</h4>
+                  <span>Koordinasi Proposal</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -974,8 +835,8 @@
                   <img src="./assets/img/fajrul.jpeg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>fajrul hakam atala</h4>
-                  <span>anggota</span>
+                  <h4>Fajrul Hakam Atala</h4>
+                  <span>Anggota</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -991,8 +852,8 @@
                   <img src="./assets/img/erlang.jpeg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>muhamad erlangga</h4>
-                  <span>anggota</span>
+                  <h4>Muhammad Erlangga Nugraha</h4>
+                  <span>Anggota</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -1008,8 +869,8 @@
                   <img src="./assets/img/WhatsApp Image 2025-11-13 at 13.00.24.jpeg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>muhamad fariz</h4>
-                  <span>anggota</span>
+                  <h4>Muhammad Fariz Maulana</h4>
+                  <span>Anggota</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -1025,8 +886,8 @@
                   <img src="./assets/img/fajar.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>pajar sidik</h4>
-                  <span>anggota</span>
+                  <h4>Pajar Sidik</h4>
+                  <span>Anggota</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -1042,8 +903,8 @@
                   <img src="./assets/img/nada.jpeg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>nada sausan</h4>
-                  <span>anggota</span>
+                  <h4>Nada Sausan</h4>
+                  <span>Anggota</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -1059,8 +920,8 @@
                   <img src="./assets/img/nabila.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>nabila</h4>
-                  <span>anggota</span>
+                  <h4>Nabila Eka Ramdhani</h4>
+                  <span>Anggota</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -1076,8 +937,8 @@
                   <img src="./assets/img/raysa.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>raysa ayu</h4>
-                  <span>anggota</span>
+                  <h4>Raysa Ayu Tadia</h4>
+                  <span>Anggota</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -1093,8 +954,8 @@
                   <img src="./assets/img/marwah.jpeg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>siti marwah</h4>
-                  <span>anggota</span>
+                  <h4>Siti Marwah</h4>
+                  <span>Anggota</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -1110,8 +971,8 @@
                   <img src="./assets/img/zulfa.jpeg" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>zulpa agustin</h4>
-                  <span>anggota</span>
+                  <h4>Zulpa Agustin</h4>
+                  <span>Anggota - BackEnd</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
@@ -1122,7 +983,6 @@
               </div>
             </div>
 
-            <!-- Tambahkan anggota lain dengan struktur yang sama -->
           </div>
 
           <!-- Pagination dan Navigasi -->
@@ -1173,158 +1033,193 @@
 
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+     <section id="contact" class="contact">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Kontak</h2>
-        <p>Hubungi kami</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Kontak</h2>
+    <p>Hubungi kami</p>
+  </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
 
-        <div class="row gy-4">
-          <div class="col-lg-6 ">
-            <div class="row gy-4">
+      <!-- Google Maps -->
+      <div class="col-lg-6">
+        <h3>Lokasi Kami</h3>
+        <iframe
+        src="https://www.google.com/maps?q=-7.3503522,108.2225516&z=17&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="col-lg-6">
+        <h3>Pesan</h3>
+      <form id="contact-form"
+        method="POST"
+        class="#"
+        action="javascript:void(0);"
+        data-aos="fade-up"
+        data-aos-delay="300">
 
-              <div class="col-lg-12">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-                  data-aos-delay="200">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Alamat</h3>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.8420003023625!2d108.22111210600622!3d-7.350741732086506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5770e4e14c7b%3A0xe223672a1e167955!2sKota%20Jl.%20Siliwangi%20No.24%2C%20Kahuripan%2C%20Kec.%20Tawang%2C%20Kab.%20Tasikmalaya%2C%20Jawa%20Barat%2046115!5e0!3m2!1sid!2sid!4v1763102426060!5m2!1sid!2sid" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              </div><!-- End Info Item -->
+    <!-- spam -->
+    <input type="hidden" name="_captcha" value="false">
 
-              <div class="col-md-6">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-                  data-aos-delay="300">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Telepon</h3>
-                  <p>08987654321</p>
-                </div>
-              </div><!-- End Info Item -->
+    <div class="row gy-4">
 
-              <div class="col-md-6">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-                  data-aos-delay="400">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email</h3>
-                  <p>fariz.hobycoli@big.boobs</p>
-                </div>
-              </div><!-- End Info Item -->
-
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="500">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="nama kamu" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email kamu" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="subjek" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="pesan" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">pesan kamu sudah dikirim.terimakasih</div>
-
-                  <button type="submit">kirim</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
+      <div class="col-md-6">
+        <input type="text" name="name" class="form-control" placeholder="Nama Lengkap" required>
       </div>
 
-    </section><!-- /Contact Section -->
+      <div class="col-md-6">
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
+      </div>
+
+      <div class="col-md-12">
+        <input type="text" class="form-control" name="subject" placeholder="Subjek" required>
+      </div>
+
+      <div class="col-md-12">
+        <textarea class="form-control" name="message" rows="4" placeholder="Pesan" required></textarea>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <button type="submit" class="contact-btn">Kirim</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup" style="
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+">
+  <div class="popup-content" style="
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    width:300px;
+  ">
+    <h3>Berhasil!</h3>
+    <p>Pesan kamu sudah terkirim.</p>
+    <button id="close-popup" style="
+      margin-top:15px;
+      padding:10px;
+      width:100%;
+      background:#e00000;
+      color:white;
+      border:none;
+      border-radius:5px;
+    ">OK</button>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Cegah validator template
+    const phpForm = document.querySelector(".php-email-form");
+    if (phpForm) {
+        phpForm.addEventListener("submit", function(e){
+            e.preventDefault();
+        });
+    }
+
+    // Form utama
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+
+        contactForm.addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch(
+                    "https://formsubmit.co/ajax/252122111096@student.unsil.ac.id",
+                    {
+                        method: "POST",
+                        body: formData
+                    }
+                );
+
+                const result = await response.json();
+
+                if (result.success) {
+                    document.getElementById("popup").style.display = "flex";
+                    contactForm.reset();
+                } else {
+                    alert("Gagal mengirim pesan.");
+                }
+
+            } catch (err) {
+                console.error(err);
+                alert("Terjadi kesalahan.");
+            }
+        });
+    }
+
+    // Tombol close popup
+    const closeBtn = document.getElementById("close-popup");
+    if (closeBtn) {
+        closeBtn.onclick = function() {
+            document.getElementById("popup").style.display = "none";
+        };
+    }
+
+});
+</script>
+
+               
+          </div>
+        </form>
+      </div>
+      <!-- End Form -->
+
+    </div>
+  </div>
+
+</section>
+    <!-- /Contact Section -->
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer dark-background" style="padding:50px 0;">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">kelompok 3</span>
-          </a>
+    <div class="container text-center">
+        <div class="footer-about logo mb-3" style="font-size:28px; font-weight:600; color:#fff;">
+            <span>Kelompok 3</span>
+            <!-- garis -->
+              <div style="width:80px; height:3px; background:#f3ba2f; margin:0 auto 20px auto; border-radius:2px;"></div>
           <div class="footer-contact pt-3">
-            <p>kelompok 3</p>
-            <p>universitas siliwangi</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>08123456789</span></p>
-            <p><strong>Email:</strong> <span>erlangcabul@gmail.com</span></p>
+            <h5>Universitas Siliwangi</h5>
+             <p>
+          Website ini dibuat untuk pemahaman bagaimana konten TikTok dapat memengaruhi 
+      perilaku konsumtif melalui penggunaan bahasa persuasif dan strategi komunikasi kreator.
+        </p>
           </div>
-          <!-- <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div> -->
-        </div>
-
-        <!-- <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-          </ul>
-        </div> -->
-
-        <!-- <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
-          </ul>
-        </div> -->
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>dukung kami</h4>
-          <p>yang subscribe dulur</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">kamu sudah langganan. mks</div>
-          </form>
-        </div>
-
       </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Kelompok III</strong></p>
-      <!-- <div class="credits"> -->
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      </div>
-    </div>
+    <div class="text-center mt-4" style="border-top:1px solid #333; padding-top:15px; font-size:14px; color:#777;">
+    © <strong>Kelompok 3</strong> — Website 
+  </div>
 
   </footer>
 
@@ -1347,25 +1242,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <!-- <script>
-    var swiper = new Swiper(".myTeamSwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        480: { slidesPerView: 1 }
-      }
-    });
-  </script> -->
 
 
   <script>
